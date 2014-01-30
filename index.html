@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                background-color: #f8f8f8;
+                font-family: 'Omnes Extra Light', Helvetica;
+                font-size: 80px;
+                font-weight: 200;
+            }
+            .container {
+                height: 500px;
+                width: 100%;
+                display: table;
+                text-align: center;
+            }
+            .container .content {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            header {
+                background: purple;
+                color: white;
+            }
+            footer {
+                background-color: #f0f0f0;
+                padding: 20px 0;
+                text-align: center;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="container">
+            <div class="content">This is a dynamic header</div>
+        </header>
+        <div class="container">
+            <div class="content">This is dynamic content</div>
+        </div>
+        <footer>
+            This is a static footer
+        </footer>
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script>
+            $(function () {
+                $('.container').fullHeight({
+                    min: 300
+                })
+            });
+        </script>
+        <!-- The plugin -->
+        <script type="text/javascript">
+            
+        </script>
+    </body>
+</html>
